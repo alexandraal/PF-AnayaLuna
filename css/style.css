@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*MAIN*/
+.index-logo{
+  margin-top: 150px;
+}
+
+.d-flex{
+  margin: 50px;
+}
+
+.indexslogan{
+  margin: 0 0 150px 0;
+}
+
+.title{
+  margin: 150px 0 20px 0;
+}
+
+.subtitle{
+  margin: 0 0 40px 0;
+}
+
+.indexonboarding_img{
+  width: 70%;
+  margin-bottom: 50px;
+  transform: translateY(50px);
+  transition: 3s;
+}

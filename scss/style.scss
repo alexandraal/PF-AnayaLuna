@@ -1,0 +1,91 @@
+/*BOOTSTRAP*/
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+/*FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
+
+/*IMPORT*/
+@import "stylenosotros";
+@import "styleservicios";
+@import "styleportafolio";
+@import "stylecontacto";
+
+/*VARS*/
+$color1: rgb(0, 122, 255);
+
+/*STYLE*/
+/*# sourceMappingURL=style.css.map */
+h1, h2, h3 {
+    text-align: center;
+    margin: 30px;
+}
+
+
+/*NAV BAR*/
+.navbar {
+    --#{$prefix}navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+%container-flex-properties {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+> .container,
+> .container-fluid,
+> .indexonboarding_img{
+    @extend %container-flex-properties;
+}
+
+@each $breakpoint, $container-max-width in $container-max-widths {
+    > .container#{breakpoint-infix($breakpoint, $container-max-widths)} {
+    @extend %container-flex-properties;
+    }
+}
+
+
+/*FOOTER*/
+.footer {
+    margin-top: 50px;
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/*RESPOSIVE*/
+$container-max-widths: (
+sm: 540px,
+md: 720px,
+lg: 960px,
+xl: 1140px,
+xxl: 1320px
+);
